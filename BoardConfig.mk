@@ -42,6 +42,7 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
 # CMHW
 BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw/src
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touchscreen/touchscreen_dev/gesture_ctrl"
 
 # CPU
 TARGET_CPU_CORTEX_A53 := true
