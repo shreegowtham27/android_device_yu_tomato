@@ -11,5 +11,9 @@
     {
     "repository": "android_device_qcom_common",
     "target_path": "device/qcom/common"
+  },
+  {
+    "repository": "proprietary_vendor_yu",
+    "target_path": "vendor/yu"
   }
 ]
