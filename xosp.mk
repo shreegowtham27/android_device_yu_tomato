@@ -14,8 +14,8 @@
 
 $(call inherit-product, device/yu/tomato/full_tomato.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common XOSP stuff.
+$(call inherit-product, vendor/xosp/config/common_full_phone.mk)
 
 # Inherit some propietary XOSP stuff
 $(call inherit-product, vendor/xosp/config/xosp.mk)
