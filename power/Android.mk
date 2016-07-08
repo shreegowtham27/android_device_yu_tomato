@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2016 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,15 +13,12 @@
 # limitations under the License.
 
 LOCAL_PATH:= $(call my-dir)
-# HAL module implemenation stored in
-# hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES := lights.c
-LOCAL_MODULE_RELATIVE_PATH    := hw
+LOCAL_SRC_FILES := power-feature.c
 LOCAL_SHARED_LIBRARIES := liblog libcutils
 
-LOCAL_MODULE := lights.msm8916
+LOCAL_MODULE := libpower_set_feature_tomato
 LOCAL_MODULE_TAGS := optional
 
-include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_STATIC_LIBRARY)

@@ -17,10 +17,10 @@ $(call inherit-product, device/yu/tomato/full_tomato.mk)
 # Inherit some common XOSP stuff.
 $(call inherit-product, vendor/xosp/config/common_full_phone.mk)
 
-# Inherit some propietary XOSP stuff
-$(call inherit-product, vendor/xosp/config/xosp.mk)
+# Must define platform variant before including any common things
+TARGET_BOARD_PLATFORM_VARIANT := msm8939
 
-PRODUCT_NAME := xosp_tomato
+PRODUCT_NAME := cm_tomato
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := tomato
 IS_ARM64 := TRUE
@@ -35,6 +35,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=YUREKA PRODUCT_NAME=YUREKA
 ## Use the latest approved GMS identifiers unless running a signed build
 ifneq ($(SIGN_BUILD),true)
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=YU/YUREKA/YUREKA:5.0.2/LRX22G/YNG1TAS1K0:user/release-keys \
-    PRIVATE_BUILD_DESC="YUREKA-user 5.0.2 LRX22G YNG1TAS1K0 release-keys"
+    BUILD_FINGERPRINT=YU/YUREKA/YUREKA:5.1.1/LMY49J/YOG4PAS8A4:user/release-keys \
+    PRIVATE_BUILD_DESC="YUREKA-user 5.1.1 LMY49J YOG4PAS8A4 release-keys"
 endif
