@@ -17,10 +17,13 @@ $(call inherit-product, device/yu/tomato/full_tomato.mk)
 # Inherit some common XOSP stuff.
 $(call inherit-product, vendor/xosp/config/common_full_phone.mk)
 
-# Must define platform variant before including any common things
-TARGET_BOARD_PLATFORM_VARIANT := msm8939
+# Inherit some proprietary XOSP stuff.
+$(call inherit-product, vendor/xosp/config/xosp.mk)
 
-PRODUCT_NAME := cm_tomato
+# Must define platform variant before including any common things
+TARGET_BOARD_PLATFORM_VARIANT := msm8916
+
+PRODUCT_NAME := xosp_tomato
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := tomato
 IS_ARM64 := TRUE
