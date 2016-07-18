@@ -14,7 +14,7 @@
 
 $(call inherit-product, device/yu/tomato/full_tomato.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common XOSP stuff.
 $(call inherit-product, vendor/xosp/config/common_full_phone.mk)
 
 # Inherit some proprietary XOSP stuff.
@@ -27,7 +27,7 @@ PRODUCT_NAME := xosp_tomato
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := tomato
 IS_ARM64 := TRUE
-#RELEASE_TYPE := XOSP_OFFICIAL
+RELEASE_TYPE := XOSP_OFFICIAL
 
 PRODUCT_GMS_CLIENTID_BASE := android-micromax
 
